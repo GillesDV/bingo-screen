@@ -7,9 +7,8 @@ A web application that keeps track of the numbers rolled during a Bingo game. In
    - the most recent one is highlighted with a special color
 
 # Tech stack:
-- .NET 8.0 (LTS) 
-- Blazor Web Assembly
-- CSS library: [MudBlazor](https://mudblazor.com/)
+- Angular
+- Tailwind CSS
 
 # Initial Frontend mockup
 ![Visual mockup of how the app will look, made with the help of Figma's AI tools](assets/bingo-mockup.png)
