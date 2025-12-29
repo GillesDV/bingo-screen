@@ -1,7 +1,8 @@
 .notSelected {
-    background-color: lightgrey;
+    background-color: #F3F4F6;
 }
 
 .selected {
-    background-color: blue;
+    background-color: #8A2DFB;
+    color: white;
 }

@@ -1,14 +1,14 @@
-<p>home works!</p>
+<div class="min-h-screen p-8 bg-[#FAF6FF]">
+    <h3 class="text-center pb-5">X of {{maxNumbers}} numbers called</h3>
 
+    <div class="w-4/5 mx-auto rounded-xl bg-white ">
 
-<div class="text-center text-lg aspect-3/2">
-    <div class="bg-#3464eb">
-        @for (item of allBingoNumbers; track $index) {
-        <app-number-tile [currentNumber]="item">
-        </app-number-tile>
-        @if(item % 15 == 0){
-        <br>
-        }
-        }
+        <div class="text-center text-l grid grid-cols-15 gap-2 p-4 ">
+            @for (item of allBingoNumbers; track $index) {
+            <app-number-tile [currentNumber]="item">
+            </app-number-tile>
+
+            }
+        </div>
     </div>
 </div>

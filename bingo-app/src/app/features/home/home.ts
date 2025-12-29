@@ -8,7 +8,8 @@ import { NumberTile } from "../number-tile/number-tile";
   styleUrl: './home.css',
 })
 export class Home {
+  public maxNumbers = 75;
 
-  public allBingoNumbers = Array.from({ length: 75 }, (_, i) => i + 1);
+  public allBingoNumbers = Array.from({ length: this.maxNumbers }, (_, i) => i + 1);
 
 }
