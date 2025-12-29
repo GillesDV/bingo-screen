@@ -1,4 +1,3 @@
-<button (click)="clickOnNumber()" [ngClass]="isSelected ? 'selected' : 'notSelected'">
-    My number is:
+<button (click)="clickOnNumber()" class="m-1 p-1.5 rounded-md" [ngClass]="isSelected ? 'selected' : 'notSelected'">
     {{currentNumber}}
 </button>

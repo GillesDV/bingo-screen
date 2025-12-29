@@ -9,6 +9,6 @@ import { NumberTile } from "../number-tile/number-tile";
 })
 export class Home {
 
-  public allBingoNumbers = Array.from({ length: 6 }, (_, i) => i); // change later to 75
+  public allBingoNumbers = Array.from({ length: 75 }, (_, i) => i + 1);
 
 }

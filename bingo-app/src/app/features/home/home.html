@@ -1,8 +1,14 @@
 <p>home works!</p>
 
 
-@for (item of allBingoNumbers; track $index) {
-<app-number-tile [currentNumber]="item">
-</app-number-tile>
-
-}
+<div class="text-center text-lg aspect-3/2">
+    <div class="bg-#3464eb">
+        @for (item of allBingoNumbers; track $index) {
+        <app-number-tile [currentNumber]="item">
+        </app-number-tile>
+        @if(item % 15 == 0){
+        <br>
+        }
+        }
+    </div>
+</div>
