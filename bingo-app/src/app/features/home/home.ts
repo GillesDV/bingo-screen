@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NumberTile } from "../number-tile/number-tile";
+import { CallNumberPanel } from '../call-number-panel/call-number-panel';
 
 @Component({
   selector: 'app-home',
-  imports: [NumberTile],
+  imports: [NumberTile, CallNumberPanel],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
