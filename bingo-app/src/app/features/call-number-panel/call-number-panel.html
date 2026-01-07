@@ -1,6 +1,12 @@
 <h2>Current Number</h2>
 
-<div class="py-9 text-gray-400 text-xl">Press "Call next number" or click a number</div>
+<div class="py-9 text-gray-400 text-xl">
+    @if(latestNumber === null){
+    Press "Call next number" or click a number
+    }@else{
+    {{latestNumber}}
+    }
+</div>
 
 <div class="flex gap-4 justify-center mt-8 font-semibold">
     <Button class="bg-black text-gray-200 rounded-md py-2 px-5" size="lg" (click)="clickedRandomNumber.emit()">

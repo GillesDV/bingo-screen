@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-call-number-panel',
@@ -8,7 +8,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class CallNumberPanel {
 
-  @Output() clickedRandomNumber = new EventEmitter<void>();
-  @Output() clickedReset = new EventEmitter<void>();
+  @Output()
+  clickedRandomNumber = new EventEmitter<void>();
+
+  @Output()
+  clickedReset = new EventEmitter<void>();
+
+  @Input()
+  latestNumber: number | null = null
 
 }
