@@ -1,5 +1,6 @@
 <div class="min-h-screen p-8 bg-[#FAF6FF]">
-    <h3 class="text-center pb-5">X of {{this.bingoStore.allNumbers | max}} numbers called</h3>
+    <h3 class="text-center pb-5">{{this.bingoStore.calledNumbers.size}} of {{this.bingoStore.allNumbers | max}} numbers
+        called</h3>
 
     <div class="w-4/5 mx-auto rounded-xl bg-white ">
 
@@ -14,7 +15,8 @@
 
     <div class="w-4/5 mx-auto grid lg:grid-cols-3 gap-6 pt-5">
         <div class="rounded-xl bg-white gap-6 rounded-xl lg:col-span-2 p-8 text-center">
-            <app-call-number-panel>
+            <app-call-number-panel (clickedRandomNumber)="bingoStore.callRandomNumber()"
+                (clickedReset)="bingoStore.reset()">
 
             </app-call-number-panel>
         </div>

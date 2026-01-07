@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-call-number-panel',
@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './call-number-panel.css',
 })
 export class CallNumberPanel {
+
+  @Output() clickedRandomNumber = new EventEmitter<void>();
+  @Output() clickedReset = new EventEmitter<void>();
 
 }

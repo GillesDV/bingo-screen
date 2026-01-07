@@ -3,8 +3,10 @@
 <div class="py-9 text-gray-400 text-xl">Press "Call next number" or click a number</div>
 
 <div class="flex gap-4 justify-center mt-8 font-semibold">
-    <Button class="bg-black text-gray-200 rounded-md py-2 px-5" size="lg">Call Next Number</Button>
-    <Button class="flex items-center gap-2 border border-gray-400 rounded-md py-2 px-5">
+    <Button class="bg-black text-gray-200 rounded-md py-2 px-5" size="lg" (click)="clickedRandomNumber.emit()">
+        Call Next Number
+    </Button>
+    <Button class="flex items-center gap-2 border border-gray-400 rounded-md py-2 px-5" (click)="clickedReset.emit()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
