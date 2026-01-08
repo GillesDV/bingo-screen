@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -8,10 +8,13 @@ import { NgClass } from '@angular/common';
   styleUrl: './number-tile.css',
 })
 export class NumberTile {
-  @Input()
-  currentNumber: number = 0;
+  @Input({ required: true })
+  currentNumber!: number;
 
+  //TODO merge with isCalled
   isSelected = false;
+
+  @Input() isCalled = false;
 
   clickOnNumber() {
     this.isSelected = !this.isSelected;

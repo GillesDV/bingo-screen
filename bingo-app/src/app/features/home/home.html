@@ -6,17 +6,18 @@
 
         <div class="text-center text-l grid grid-cols-15 gap-2 p-4 ">
             @for (item of bingoStore.allNumbers; track $index) {
-            <app-number-tile [currentNumber]="item">
+            <app-number-tile [currentNumber]="item" [isCalled]="bingoStore.isCalled(item)">
             </app-number-tile>
 
             }
+
         </div>
     </div>
 
     <div class="w-4/5 mx-auto grid lg:grid-cols-3 gap-6 pt-5">
         <div class="rounded-xl bg-white gap-6 rounded-xl lg:col-span-2 p-8 text-center">
             <app-call-number-panel (clickedRandomNumber)="bingoStore.callRandomNumber()"
-                (clickedReset)="bingoStore.reset()">
+                (clickedReset)="bingoStore.reset()" [latestNumber]="bingoStore.currentNumber">
 
             </app-call-number-panel>
         </div>
