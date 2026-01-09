@@ -44,6 +44,11 @@ export class BingoGameStore {
         return n;
     }
 
+    resetOneNumber(n: number): void {
+        this._calledNumbers.delete(n);
+        this._lastCalledNumber = null;
+    }
+
     reset(): void {
         this._calledNumbers.clear();
         this._lastCalledNumber = null;
