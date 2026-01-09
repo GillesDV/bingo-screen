@@ -12,7 +12,9 @@ export class NumberTile {
   @Input({ required: true })
   currentNumber!: number;
 
-  @Input() isCalled = false;
+  get isCalled(): boolean {
+    return this.bingoStore.isCalled(this.currentNumber);
+  }
 
   clickOnNumber() {
     //Don't modify isCalled here, because bingoStore should be the single source of truth

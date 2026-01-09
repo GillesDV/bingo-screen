@@ -6,7 +6,7 @@
 
         <div class="text-center text-l grid grid-cols-15 gap-2 p-4 ">
             @for (item of bingoStore.allNumbers; track $index) {
-            <app-number-tile [currentNumber]="item" [isCalled]="bingoStore.isCalled(item)">
+            <app-number-tile [currentNumber]="item">
             </app-number-tile>
 
             }
