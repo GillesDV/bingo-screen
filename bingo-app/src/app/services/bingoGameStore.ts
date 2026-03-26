@@ -7,14 +7,17 @@ export class BingoGameStore {
 
     private readonly _calledNumbers = new Set<number>();
     private readonly _allNumbers = Array.from({ length: this.maxNumbers }, (_, i) => i + 1);
-    private _lastCalledNumber: number | null = null
+    private _stackLastCalledNumbers: number[] = [];
 
     get calledNumbers(): ReadonlySet<number> {
         return this._calledNumbers;
     }
 
     get currentNumber(): number | null {
-        return this._lastCalledNumber;
+        if (this._stackLastCalledNumbers) {
+            return this._stackLastCalledNumbers[this._stackLastCalledNumbers.length - 1];
+        }
+        return null;
     }
 
     get allNumbers(): ReadonlyArray<number> {
@@ -27,7 +30,7 @@ export class BingoGameStore {
 
         const next = remaining[Math.floor(Math.random() * remaining.length)];
         this._calledNumbers.add(next);
-        this._lastCalledNumber = next;
+        this._stackLastCalledNumbers.push(next);
 
         return next;
     }
@@ -39,19 +42,19 @@ export class BingoGameStore {
         if (remaining.length === 0) return null;
 
         this._calledNumbers.add(n);
-        this._lastCalledNumber = n;
+        this._stackLastCalledNumbers.push(n);
 
         return n;
     }
 
     resetOneNumber(n: number): void {
         this._calledNumbers.delete(n);
-        this._lastCalledNumber = null;
+        this._stackLastCalledNumbers.pop();
     }
 
     reset(): void {
         this._calledNumbers.clear();
-        this._lastCalledNumber = null;
+        this._stackLastCalledNumbers = [];
     }
 
     isCalled(n: number): boolean {
