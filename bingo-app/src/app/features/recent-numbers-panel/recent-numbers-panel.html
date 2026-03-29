@@ -1,0 +1,17 @@
+<h2>Recent Numbers</h2>
+
+<div class="recentNumbersScroller mt-6 flex flex-col gap-3 items-stretch pr-1">
+    @if (recentNumbers.length === 0) {
+    <div class="olderCalledNumbers rounded-xl px-4 py-5 text-center text-sm text-gray-500">
+        No numbers called yet
+    </div>
+    } @else {
+    @for (number of recentNumbers; track number; let isFirst = $first) {
+    <div class="rounded-xl px-4 py-4 text-center font-semibold"
+        [class.mostRecentCalledNumbers]="isFirst"
+        [class.olderCalledNumbers]="!isFirst">
+        {{ number }}
+    </div>
+    }
+    }
+</div>

@@ -1,0 +1,37 @@
+.recentNumbersScroller {
+    max-height: 8.75rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+}
+
+.recentNumbersScroller::-webkit-scrollbar {
+    width: 6px;
+}
+
+.recentNumbersScroller::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.recentNumbersScroller::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 9999px;
+}
+
+.mostRecentCalledNumbers {
+    background-color: #E9D4FF;
+    color: #4C1D95;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.olderCalledNumbers {
+    background-color: #F9FAFB;
+    color: #4B5563;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

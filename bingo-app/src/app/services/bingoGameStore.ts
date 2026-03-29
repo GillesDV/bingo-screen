@@ -24,6 +24,10 @@ export class BingoGameStore {
         return this._allNumbers;
     }
 
+    get recentCalledNumbers(): ReadonlyArray<number> {
+        return [...this._stackLastCalledNumbers].reverse();
+    }
+
     callRandomNumber(): number | null {
         const remaining = this._allNumbers.filter(n => !this._calledNumbers.has(n));
         if (remaining.length === 0) return null;
