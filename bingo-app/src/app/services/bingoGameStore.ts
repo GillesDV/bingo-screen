@@ -49,7 +49,7 @@ export class BingoGameStore {
 
     resetOneNumber(n: number): void {
         this._calledNumbers.delete(n);
-        this._stackLastCalledNumbers.pop();
+        this._stackLastCalledNumbers = this._stackLastCalledNumbers.filter(calledNumber => calledNumber !== n);
     }
 
     reset(): void {
