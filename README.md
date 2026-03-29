@@ -6,6 +6,9 @@ A web application that keeps track of the numbers rolled during a Bingo game. In
 - Shows the numbers that have been called out (by clicking on them or rolling a new one randomly)
    - the most recent one is highlighted with a special color
 
+# Deployment
+Deployed using GitHub Pages. [gillesdv.github.io/bingo-screen](https://gillesdv.github.io/bingo-screen/)
+
 # Tech stack:
 - Angular
 - Tailwind CSS

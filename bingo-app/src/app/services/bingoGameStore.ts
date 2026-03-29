@@ -61,4 +61,8 @@ export class BingoGameStore {
         return this._calledNumbers.has(n);
     }
 
+    isNewest(n: number): boolean {
+        return this._stackLastCalledNumbers[this._stackLastCalledNumbers.length - 1] === n;
+    }
+
 }

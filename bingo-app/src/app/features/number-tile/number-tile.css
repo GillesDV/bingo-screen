@@ -2,7 +2,12 @@
     background-color: #F3F4F6;
 }
 
-.selected {
-    background-color: #8A2DFB;
+.AlreadySelected {
+    background-color: #E9D4FF;
+    color: #9CA3AF;
+}
+
+.NewestSelected {
+    background: linear-gradient(to bottom right, #931EFB, #2F5AFC);
     color: white;
 }
